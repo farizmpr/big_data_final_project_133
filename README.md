@@ -22,3 +22,21 @@ rentang waktu yang diterima = 0.00000000000000001
 1. Model 1: 300.000 data pertama.
 2. Model 2: 300.000 data kedua.
 3. Model 3: 300.000 data ketiga.
+
+## akses API
+dengan menjalankan localhost (0.0.0.0) dengan port tertentu
+
+## step by step menjalankan system
+1. jalankan zookeeper dengan mengetikkan syntax zkserver
+2.membuat topik di kafka dengan syntax
+```
+kafka-topics.bat — create — zookeeper localhost:2181 — replication-factor 1 — partitions 1 — topic home-kitchen
+```
+3.menjalankan producer.py di spyder
+4.menjalankan consumer.py spyder
+5.setelah itu konsumer akan menerima data
+6.menjalankan server.py untuk mengtrain data dan mengakses API
+
+## API REQUEST
+http://localhost:/<model_id>/<user_id>/ratings/top/<count_num>
+
