@@ -38,5 +38,15 @@ kafka-topics.bat — create — zookeeper localhost:2181 — replica
 6.menjalankan server.py untuk mengtrain data dan mengakses API
 
 ## API REQUEST
-http://localhost:/<model_id>/<user_id>/ratings/top/<count_num>
+1.memberikan rekomendasi produk sesuai dengan user<br>http://localhost:/<model_id>/<user_id>/ratings/top/<count_num>
+<br>
+![1](./img_pur/6.1.PNG)
+
+2.<br>menampilkan user yang paling di rekomendasikan berdasarkan produk<br>http://localhost:/<int:model>/products/<int:product_id>/recommend/<int:count>
+<br>
+![2](./img_pur/6.2.PNG)
+
+3.menampilkan user tersebut merating produk tertentu<br>http://localhost:/<int:model>/<int:user_id>/ratings/<int:product_id>
+<br>
+![1](./img_pur/6.3.PNG)
 
