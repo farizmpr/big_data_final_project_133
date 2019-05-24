@@ -27,15 +27,15 @@ rentang waktu yang diterima = 0.00000000000000001
 dengan menjalankan localhost (0.0.0.0) dengan port tertentu
 
 ## step by step menjalankan system
-1. jalankan zookeeper dengan mengetikkan syntax zkserver
+1. jalankan zookeeper dengan mengetikkan syntax zkserver<br>
 2.membuat topik di kafka dengan syntax
 ```
 kafka-topics.bat — create — zookeeper localhost:2181 — replication-factor 1 — partitions 1 — topic home-kitchen
 ```
-3.menjalankan producer.py di spyder
-4.menjalankan consumer.py spyder
-5.setelah itu konsumer akan menerima data
-6.menjalankan server.py untuk mengtrain data dan mengakses API
+3.menjalankan producer.py di spyder<br>
+4.menjalankan consumer.py spyder<br>
+5.setelah itu konsumer akan menerima data<br>
+6.menjalankan server.py untuk mengtrain data dan mengakses API<br>
 
 ## API REQUEST
 1.memberikan rekomendasi produk sesuai dengan user<br>http://localhost:/<model_id>/<user_id>/ratings/top/<count_num>
