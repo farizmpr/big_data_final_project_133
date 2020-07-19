@@ -1,52 +1,52 @@
 # big_data_final_project_133
 
 ## producer.py
-yang fungsinya akan mengirim data ke comsumer
+this function will send the data to consumer
 
 ## comsumer.py
-yang fungsinya akan menerima data dari producer dan akan menyipannya dalam bentuk batch
+it will receive data from producer and will keep the file with batch format
 
 ## server.py
-fungsinya untuk menjalankan endpoint API, dan untuk menjalankan engine dan app
+to endpoint API, and to run engine and app
 
 ## app.py
-fungsinya untuk mengatur routing an
+to setting up routing
 
 ## engine.py
-Untuk inisialisasi spark, untuk menjalankan webserver, untuk memanggil app.py dan engine.py, dan setting dataset location
+initialization, to run the webserver, to call app.py and engine.py, and set the location dataset
 
-jumlah data = 300.000 data/batch
-rentang waktu yang diterima = 0.00000000000000001
+total data = 300.000 data/batch
+range of time receive = 0.00000000000000001
 
 ## model 
-1. Model 1: 300.000 data pertama.
-2. Model 2: 300.000 data kedua.
-3. Model 3: 300.000 data ketiga.
+1. Model 1: 300.000 first data.
+2. Model 2: 300.000 second data.
+3. Model 3: 300.000 third data.
 
 ## akses API
-dengan menjalankan localhost (0.0.0.0) dengan port tertentu
+run localhost (0.0.0.0) with some port
 
-## step by step menjalankan system
-1. jalankan zookeeper dengan mengetikkan syntax zkserver<br>
-2.membuat topik di kafka dengan syntax
+## step by step to run the system
+1. run zookeeper with this syntax zkserver<br>
+2.make topic in kafka with this syntax
 ```
 kafka-topics.bat — create — zookeeper localhost:2181 — replication-factor 1 — partitions 1 — topic home-kitchen
 ```
-3.menjalankan producer.py di spyder<br>
-4.menjalankan consumer.py spyder<br>
-5.setelah itu konsumer akan menerima data<br>
-6.menjalankan server.py untuk mengtrain data dan mengakses API<br>
+3.run producer.py in spyder<br>
+4.run consumer.py spyder<br>
+5.after that consumer will receive data<br>
+6.run server.py for training data and access API<br>
 
 ## API REQUEST
-1.memberikan rekomendasi produk sesuai dengan user<br>http://localhost:/<model_id>/<user_id>/ratings/top/<count_num>
+1.give recommendation product according to the user <br>http://localhost:/<model_id>/<user_id>/ratings/top/<count_num>
 <br>
 ![1](./img_pur/6.1.PNG)
 
-2.<br>menampilkan user yang paling di rekomendasikan berdasarkan produk<br>http://localhost:/<int:model>/products/<int:product_id>/recommend/<int:count>
+2.<br>show the most recommended users by product<br>http://localhost:/<int:model>/products/<int:product_id>/recommend/<int:count>
 <br>
 ![2](./img_pur/6.2.PNG)
 
-3.menampilkan user tersebut merating produk tertentu<br>http://localhost:/<int:model>/<int:user_id>/ratings/<int:product_id>
+3.showing the user rating a particular product<br>http://localhost:/<int:model>/<int:user_id>/ratings/<int:product_id>
 <br>
 ![1](./img_pur/6.3.PNG)
 
